@@ -1,0 +1,26 @@
+# 1. IGNORAR SEGREDOS (Essencial para segurança)
+.env
+wp-config.php
+
+# 2. IGNORAR ARQUIVOS CORE DO WORDPRESS (Você não precisa versionar o WP em si)
+wp-admin/
+wp-includes/
+*.php
+!wp-content/
+
+# 3. IGNORAR CONTEÚDO DINÂMICO (Imagens dos laboratórios, PDFs, backups)
+wp-content/uploads/
+wp-content/backup-db/
+wp-content/upgrade/
+wp-content/cache/
+
+# 4. IGNORAR PLUGINS E TEMAS DE TERCEIROS (Versione apenas o tema customizado que você está criando)
+wp-content/plugins/*
+!wp-content/plugins/seu-plugin-customizado/
+wp-content/themes/*
+!wp-content/themes/tema-grupo-cromatografia/
+
+# 5. IGNORAR LIXO DE SISTEMA OPERACIONAL E LOGS
+.DS_Store
+Thumbs.db
+*.log

@@ -86,6 +86,17 @@ picture {
   box-sizing: border-box;
 }
 
+/* Correção de espaçamento quando a barra de admin do WordPress estiver ativa */
+.admin-bar #header-div {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  .admin-bar #header-div {
+    top: 46px; /* A barra do WP fica mais gordinha no mobile */
+  }
+}
+
 #menuHeader {
   left: auto;
 }
